@@ -16,8 +16,8 @@ class PetsController < ApplicationController
     else
       @pet.owner = Owner.find_by_id(params[:pet][:owner_id])
     end
-    @pet.save
-    redirect to "pets/#{@pet.id}"
+      @pet.save
+      redirect to "pets/#{@pet.id}"
   end
 
   get '/pets/:id/edit' do
